@@ -18,11 +18,10 @@
       <div>
         <input type="checkbox">
         <label style="padding: 10px;">{{ ami }}</label>
-        <button >delete</button>
+        <button (click)="EnleveALaToDo">delete</button>
       </div>
     }
   
-
   <input type="text" (keyup.enter)="AjoutALaToDo($event)">
 
 </main>
