@@ -1,0 +1,30 @@
+<main class="main">
+  <h1>Hello worlds</h1>
+  
+  <button (click)="AddOne()" (click)="OnRDVChange()">Click to test</button>
+
+  <button (click)="Reset()" (click)="OnRDVChange()">Reset</button>
+
+  <h2 >Btc balance : {{randomVar}} at a price of : {{btcPrice}} €</h2>
+  <p>Your total is : {{totalWalletValue}} €</p>
+
+  <section *ngIf="randomVar>=10"> 
+    Money is good eh!
+  </section>
+  
+  <h3>Ma TO DO du jour</h3>
+
+    @for (ami of amies; track $index) { 
+      <div>
+        <input type="checkbox">
+        <label style="padding: 10px;">{{ ami }}</label>
+        <button >delete</button>
+      </div>
+    }
+  
+
+  <input type="text" (keyup.enter)="AjoutALaToDo($event)">
+
+</main>
+
+<router-outlet />
